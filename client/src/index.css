@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.extra {
+  background-color: teal !important;
+}
+
+.dotted-underline {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.team-mods {
+  padding-right: 0.5rem;
+}
+
+.chance {
+  padding-left: 0.5rem;
+}
+
+.chance svg {
+  width: 8rem;
+}
+
+.react-tabs__tab-panel--selected {
+  padding: 0.5rem;
+}
+
+.react-tabs__tab--selected {
+  font-weight: bold;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
