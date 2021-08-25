@@ -183,7 +183,7 @@ export default class Table extends Component<P, S> {
         default:
           break;
       }
-      const res = await fetch("http://localhost:5000/get_ic_items/" + tableId);
+      const res = await fetch(`/get_ic_items/${tableId}`);
       const json = await res.json();
       localStorage.setItem(this.props.ic, JSON.stringify(json));
     } catch (error) {
