@@ -15,10 +15,6 @@ code {
     monospace;
 }
 
-.extra {
-  background-color: teal !important;
-}
-
 .dotted-underline {
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -70,4 +66,12 @@ code {
 
 .green-text {
   color: green;
+}
+
+.contact {
+  padding-top: 1rem;
+}
+
+.extra-h3 {
+  padding-top: 1rem;
 }

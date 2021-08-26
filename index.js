@@ -39,7 +39,6 @@ const PORT = process.env.PORT || 5000;
 app.get("/get_ic_items/:ic", async (req, res) => {
   const { ic } = req.params;
   table = tables[parseInt(ic)];
-  console.log(req.hostname);
   try {
     const allItems = await pool.query("SELECT * FROM " + table);
     res.json(allItems.rows);
