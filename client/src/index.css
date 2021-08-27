@@ -8,11 +8,17 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  background-color: #424242;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.pt {
+  padding-top: 1rem;
 }
 
 .dotted-underline {
@@ -37,11 +43,12 @@ code {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .team-mods {
   padding-right: 0.5rem;
+  align-items: flex-start;
 }
 
 .chance {
@@ -54,10 +61,18 @@ code {
 
 .react-tabs__tab-panel--selected {
   padding: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .react-tabs__tab--selected {
   font-weight: bold;
+  background-color: #424242 !important;
+  color: white !important;
+}
+
+.react-tabs__tab--selected#react-tabs-14,
+.blue-text {
+  color: #3e98c7 !important;
 }
 
 .red-text {
@@ -69,9 +84,31 @@ code {
 }
 
 .contact {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .extra-h3 {
   padding-top: 1rem;
+}
+
+.extra-tab {
+  padding: 0 1.5rem;
+}
+
+.extra-tab .indent {
+  padding-left: 1rem;
+}
+
+.extra-tab a {
+  color: #3e98c7;
+}
+
+.pb {
+  padding-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+  width: 1rem !important;
+  height: 1rem !important;
+  vertical-align: text-top;
 }

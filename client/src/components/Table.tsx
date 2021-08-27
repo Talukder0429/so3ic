@@ -128,7 +128,9 @@ export default class Table extends Component<P, S> {
     ) {
       out.push(
         <p className="left-align" key={-1}>
-          <span className="bold">Exact price(s) to create this item</span>
+          <span className="bold blue-text">
+            Exact price(s) to create this item
+          </span>
           {": "}
           <span className="italics">Other items that can also be made</span>
         </p>
@@ -136,7 +138,7 @@ export default class Table extends Component<P, S> {
       props.map.forEach((v, k) => {
         out.push(
           <div className="left-align" key={k}>
-            <span className="bold">{k}</span>
+            <span className="bold blue-text">{k}</span>
             {": "}
             <span className="italics">{v.join(", ")}</span>
           </div>
@@ -147,8 +149,10 @@ export default class Table extends Component<P, S> {
         out.push(
           <div key={-1}>
             <div>Selected inventors cannot make this item!</div>
-            <div>Please include at lest one of the following inventors:</div>
-            <div className="bold">{this.state.selectedItem.inventors}</div>
+            <div>Please include at least one of the following inventors:</div>
+            <div className="bold blue-text">
+              {this.state.selectedItem.inventors}
+            </div>
           </div>
         );
     }
@@ -375,6 +379,7 @@ export default class Table extends Component<P, S> {
           onSelectedRowsChange={this.selectedInventorsChange}
           selectableRowSelected={this.loadPrvSelectedInventors}
           selectableRowDisabled={this.disableInventors}
+          theme="dark"
         />
         <Select
           options={this.state.allItems}
@@ -388,8 +393,40 @@ export default class Table extends Component<P, S> {
             });
           }}
           defaultValue={this.state.selectedItem}
+          styles={{
+            control: (base) => ({
+              ...base,
+              backgroundColor: "#3e98c7",
+              color: "#3e98c7",
+            }),
+            menuList: (base) => ({
+              ...base,
+              backgroundColor: "#424242",
+              color: "white",
+            }),
+            option: (base, state) => ({
+              ...base,
+              backgroundColor: state.isSelected ? "#141414" : "#424242",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#3e98c7",
+              },
+            }),
+            placeholder: (base) => ({
+              ...base,
+              color: "white",
+            }),
+            singleValue: (base) => ({
+              ...base,
+              color: "white",
+            }),
+            menu: (base) => ({
+              ...base,
+              border: "2px solid white",
+              borderTop: "none",
+            }),
+          }}
         />
-        <this.PricesComponent map={this.state.targetPrices} />
         <div>
           <div className="team-stats">
             <div className="team-mods">
@@ -445,6 +482,7 @@ export default class Table extends Component<P, S> {
             </div>
           </div>
         </div>
+        <this.PricesComponent map={this.state.targetPrices} />
       </div>
     );
   }
