@@ -406,7 +406,11 @@ export default class Table extends Component<P, S> {
             }),
             option: (base, state) => ({
               ...base,
-              backgroundColor: state.isSelected ? "#141414" : "#424242",
+              backgroundColor: state.isSelected
+                ? "#141414"
+                : state.isFocused
+                ? "#3e98c7"
+                : "#424242",
               color: "white",
               "&:hover": {
                 backgroundColor: "#3e98c7",
